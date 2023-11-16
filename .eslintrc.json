@@ -11,12 +11,16 @@
   "rules": {
     "react/jsx-filename-extension": "off",
     "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": "off",
+    "arrow-body-style": "off",
     "quotes": ["error", "double"],
+    // import settings
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": "off",
     "simple-import-sort/imports": [
       "warn",
       {
         "groups": [
-          // Packages `react` related packages come first.
           [ "^react", "^@?\\w" ],
           [ "^@/app/(.*)$" ],
           [ "^@/pages/(.*)$" ],

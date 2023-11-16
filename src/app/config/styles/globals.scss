@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    @import "./themes/dark-theme";
+    @import "./themes/light-theme";
+}
+
+
 .page-wrapper {
     @apply flex min-h-screen flex-col items-center;
 }
+

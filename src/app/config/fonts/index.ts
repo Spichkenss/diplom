@@ -1,0 +1,4 @@
+/* eslint-disable import/prefer-default-export */
+import { Montserrat } from "next/font/google";
+
+export const montserrat = Montserrat({ subsets: ["latin"] });
