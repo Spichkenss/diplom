@@ -10,7 +10,7 @@
   ],
   "overrides": [
     {
-      "files": ["./src/shared/**/*.{js,ts,jsx,tsx}"],
+      "files": ["./src/shared/**/*.{js,ts,jsx,tsx}", "*.ts"],
       "rules": {
         "import/prefer-default-export": "off"
       }

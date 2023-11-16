@@ -7,6 +7,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        icon: "var(--icon-color)",
+      },
       textColor: {
         primary: "var(--text-color)",
       },

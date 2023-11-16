@@ -8,10 +8,12 @@ import { TabsContextProps } from "./Tabs.types";
 
 const TabsContext = createContext<TabsContextProps | null>(null);
 
-interface TabsContextProviderProps extends PropsWithChildren {}
+interface TabsContextProviderProps extends PropsWithChildren {
+  initialTabIndex: number
+}
 
-export const TabsContextProvider = ({ children }: TabsContextProviderProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export const TabsContextProvider = ({ children, initialTabIndex }: TabsContextProviderProps) => {
+  const [currentIndex, setCurrentIndex] = useState(initialTabIndex);
 
   const setTabIndex = (newIndex: number) => {
     setCurrentIndex(newIndex);

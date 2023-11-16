@@ -1,28 +1,38 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import { useTheme } from "next-themes";
 
 import { Icon } from "@/shared/ui/icon";
 import { Tabs, TabTrigger } from "@/shared/ui/tabs";
 
+import { themes } from "./themes";
+
+const getStoredThemeValue = () => {
+  return localStorage.getItem("theme") || "system";
+};
+
 const ThemeSwitch = () => {
-  const [mounted, setMounted] = useState(false);
   const { setTheme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => { setIsMounted(true); }, []);
 
-  if (!mounted) return null;
+  if (!isMounted) return null;
+
+  const initialIndex = themes.findIndex((item) => item.value === getStoredThemeValue());
 
   return (
-    <Tabs>
-      <TabTrigger index={0} onClick={() => setTheme("light")}>
-        <Icon icon={IoSunnyOutline} size="1.2rem" color="white" />
-      </TabTrigger>
-      <TabTrigger index={1} onClick={() => setTheme("dark")}>
-        <Icon icon={IoMoonOutline} size="1.2rem" color="white" />
-      </TabTrigger>
+    <Tabs initialTabIndex={initialIndex}>
+      {themes.map(({ icon, value }, index) => (
+        <TabTrigger
+          key={value}
+          index={index}
+          onClick={() => setTheme(value)}
+        >
+          <Icon icon={icon} size="1.5rem" className="text-icon" />
+        </TabTrigger>
+      ))}
     </Tabs>
   );
 };

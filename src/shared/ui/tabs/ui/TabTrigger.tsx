@@ -7,7 +7,7 @@ import { useTabsContext } from "@/shared/ui/tabs/model/Tabs.context";
 
 interface TabTriggerProps extends Omit<ComponentProps<"button">, "onClick"> {
   index: number;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const TabTrigger = forwardRef<HTMLButtonElement, TabTriggerProps>(
@@ -26,8 +26,8 @@ export const TabTrigger = forwardRef<HTMLButtonElement, TabTriggerProps>(
         type="button"
         ref={ref}
         className={cn(
-          "bg-secondary flex items-center justify-center rounded p-1",
-          { "bg-secondary-accent": currentIndex === index },
+          "bg-secondary flex items-center justify-center rounded-md p-1 outline-none border-none",
+          { "bg-secondary-accent": index === currentIndex },
           className,
         )}
         onClick={handleClick}

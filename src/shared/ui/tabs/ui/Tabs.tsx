@@ -4,13 +4,17 @@ import { cn } from "@/shared/lib/cn";
 
 import { TabsContextProvider } from "../model/Tabs.context";
 
-interface TabsProps extends ComponentProps<"div"> {}
+interface TabsProps extends ComponentProps<"div"> {
+  initialTabIndex: number;
+}
 
 export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
-  ({ children, className, ...rest }: TabsProps, ref) => {
+  ({
+    children, className, initialTabIndex, ...rest
+  }: TabsProps, ref) => {
     return (
-      <TabsContextProvider>
-        <div className={cn("flex flex-row bg-secondary p-1 rounded", className)} {...rest} ref={ref}>
+      <TabsContextProvider initialTabIndex={initialTabIndex}>
+        <div className={cn("flex flex-row bg-secondary p-1 rounded-md", className)} {...rest} ref={ref}>
           {children}
         </div>
       </TabsContextProvider>

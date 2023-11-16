@@ -1,4 +1,4 @@
-import ThemeSwitch from "@/app/config/providers/theme/ThemeSwitch";
+import ThemeSwitch from "../config/providers/theme/ThemeSwitch";
 
 export default function HomePage() {
   return (
