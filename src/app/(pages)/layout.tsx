@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 
 import { Navbar } from "@/widgets/navbar";
 
+import { cn } from "@/shared/lib/cn";
+
 import { montserrat } from "../config/fonts";
 import Providers from "../config/providers";
 
@@ -19,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" suppressHydrationWarning>
-      <body className={montserrat.className}>
+      <body className={cn("bg-secondary", montserrat.className)}>
         <Providers>
           <Navbar />
           {children}
