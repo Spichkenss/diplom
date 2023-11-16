@@ -1,34 +1,29 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import { useTheme } from "next-themes";
+
+import { Icon } from "@/shared/ui/icon";
+import { Tabs, TabTrigger } from "@/shared/ui/tabs";
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
-
-  const switchTheme = () => {
-    if (theme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
-    }
-  };
 
   if (!mounted) return null;
 
   return (
-    <div className="flex flex-col items-center mt-24">
-      <div>
-        Current theme:
-        {theme}
-      </div>
-      <button onClick={switchTheme} type="button" className="bg-black text-white p-2 rounded">
-        Theme
-      </button>
-    </div>
+    <Tabs>
+      <TabTrigger index={0} onClick={() => setTheme("light")}>
+        <Icon icon={IoSunnyOutline} size="1.2rem" color="white" />
+      </TabTrigger>
+      <TabTrigger index={1} onClick={() => setTheme("dark")}>
+        <Icon icon={IoMoonOutline} size="1.2rem" color="white" />
+      </TabTrigger>
+    </Tabs>
   );
 };
 

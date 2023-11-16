@@ -8,12 +8,23 @@
     "simple-import-sort",
     "import"
   ],
+  "overrides": [
+    {
+      "files": ["./src/shared/**/*.{js,ts,jsx,tsx}"],
+      "rules": {
+        "import/prefer-default-export": "off"
+      }
+    }
+  ],
   "rules": {
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": "off",
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": "off",
     "arrow-body-style": "off",
     "quotes": ["error", "double"],
+    "no-unused-vars": ["warn", {"args":  "none"}],
     // import settings
     "import/no-extraneous-dependencies": "off",
     "import/extensions": "off",
