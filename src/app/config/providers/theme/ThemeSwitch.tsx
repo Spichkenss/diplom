@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 import { Icon } from "@/shared/ui/icon";
@@ -14,11 +13,6 @@ const getStoredThemeValue = () => {
 
 const ThemeSwitch = () => {
   const { setTheme } = useTheme();
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => { setIsMounted(true); }, []);
-
-  if (!isMounted) return null;
 
   const initialIndex = themes.findIndex((item) => item.value === getStoredThemeValue());
 

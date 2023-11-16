@@ -1,9 +1,17 @@
-import { PropsWithChildren } from "react";
+"use client";
+
+import { PropsWithChildren, useEffect, useState } from "react";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 
 interface ThemeProviderProps extends PropsWithChildren {}
 
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => { setIsMounted(true); }, []);
+
+  if (!isMounted) return null;
+
   return (
     <NextThemeProvider
       attribute="class"
