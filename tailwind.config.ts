@@ -7,8 +7,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "1rem",
+      },
       colors: {
         icon: "var(--icon-color)",
+      },
+      borderColor: {
+        neutral: "var(--border-color)",
       },
       textColor: {
         primary: "var(--text-color)",

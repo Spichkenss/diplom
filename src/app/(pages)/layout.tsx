@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
 
+import { Navbar } from "@/widgets/navbar";
+
 import { montserrat } from "../config/fonts";
 import Providers from "../config/providers";
 
@@ -19,6 +21,7 @@ export default function RootLayout({
     <html lang="ru" suppressHydrationWarning>
       <body className={montserrat.className}>
         <Providers>
+          <Navbar />
           {children}
         </Providers>
       </body>

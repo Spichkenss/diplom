@@ -2,8 +2,10 @@ html[class="light"] {
   --text-color: black;
 
   --bg-color-primary: theme("colors.white");
-  --bg-color-secondary: theme("colors.neutral.200");
-  --bg-color-secondary-accent: theme("colors.neutral.400");
+  --bg-color-secondary: theme("colors.neutral.100");
+  --bg-color-secondary-accent: theme("colors.neutral.200");
 
   --icon-color: theme("colors.blue.600");
+
+  --border-color: theme("colors.neutral.200");
 }

@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { Icon } from "@/shared/ui/icon";
 import { Tabs, TabTrigger } from "@/shared/ui/tabs";
 
-import { themes } from "./themes";
+import { themes } from "../model/themes";
 
 const getStoredThemeValue = () => {
   return localStorage.getItem("theme") || "system";

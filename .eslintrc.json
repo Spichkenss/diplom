@@ -8,15 +8,8 @@
     "simple-import-sort",
     "import"
   ],
-  "overrides": [
-    {
-      "files": ["./src/shared/**/*.{js,ts,jsx,tsx}", "*.ts"],
-      "rules": {
-        "import/prefer-default-export": "off"
-      }
-    }
-  ],
   "rules": {
+    "import/prefer-default-export": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": "off",

@@ -2,7 +2,7 @@
 
 import { PropsWithChildren } from "react";
 
-import ThemeProvider from "./theme/ThemeProvider";
+import ThemeProvider from "@/app/config/providers/ui/ThemeProvider";
 
 interface ProvidersProps extends PropsWithChildren {}
 

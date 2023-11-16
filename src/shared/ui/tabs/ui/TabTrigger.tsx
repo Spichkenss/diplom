@@ -26,7 +26,7 @@ export const TabTrigger = forwardRef<HTMLButtonElement, TabTriggerProps>(
         type="button"
         ref={ref}
         className={cn(
-          "bg-secondary flex items-center justify-center rounded-md p-1 outline-none border-none",
+          "bg-primary flex items-center justify-center rounded-md p-1 outline-none border-none",
           { "bg-secondary-accent": index === currentIndex },
           className,
         )}

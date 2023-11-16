@@ -14,7 +14,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
   }: TabsProps, ref) => {
     return (
       <TabsContextProvider initialTabIndex={initialTabIndex}>
-        <div className={cn("flex flex-row bg-secondary p-1 rounded-md", className)} {...rest} ref={ref}>
+        <div className={cn("flex flex-row bg-primary p-1 rounded-md", className)} {...rest} ref={ref}>
           {children}
         </div>
       </TabsContextProvider>

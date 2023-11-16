@@ -1,10 +1,7 @@
-import ThemeSwitch from "../config/providers/theme/ThemeSwitch";
-
 export default function HomePage() {
   return (
     <main className="page-wrapper bg-primary text-primary">
-      Hello world!
-      <ThemeSwitch />
+      Main page
     </main>
   );
 }
