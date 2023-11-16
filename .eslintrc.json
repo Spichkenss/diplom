@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb/hooks"
+  ],
+  "plugins": [
+    "simple-import-sort",
+    "import"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "react/react-in-jsx-scope": "off",
+    "quotes": ["error", "double"],
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          // Packages `react` related packages come first.
+          [ "^react", "^@?\\w" ],
+          [ "^@/app/(.*)$" ],
+          [ "^@/pages/(.*)$" ],
+          [ "^@/widgets/(.*)$" ],
+          [ "^@/features/(.*)$" ],
+          [ "^@/entities/(.*)$" ],
+          [ "^@/shared/(.*)$" ],
+          [ "^\\u0000" ],
+          [ "^\\.\\.(?!/?$)", "^\\.\\./?$" ],
+          [ "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$" ],
+          [ "^.+\\.?(scss)$" ]
+        ]
+      }
+    ]
+  }
+}
