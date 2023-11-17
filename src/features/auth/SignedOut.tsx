@@ -1,12 +1,10 @@
-"use client";
-
-import { PropsWithChildren } from "react";
-import { useSession } from "next-auth/react";
+import { Fragment, PropsWithChildren } from "react";
+import { getServerSession } from "next-auth";
 
 interface SignedOutProps extends PropsWithChildren {}
 
-export const SignedOut = ({ children }: SignedOutProps) => {
-  const { status } = useSession();
-  if (status !== "authenticated") return children;
+export const SignedOut = async ({ children }: SignedOutProps) => {
+  const session = await getServerSession();
+  if (!session) return <Fragment>{children}</Fragment>;
   return null;
 };

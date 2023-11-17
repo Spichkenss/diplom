@@ -15,6 +15,8 @@
     "react/jsx-filename-extension": "off",
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/jsx-fragments": "off",
     "arrow-body-style": "off",
     "quotes": ["error", "double"],
     "no-unused-vars": ["warn", {"args":  "none"}],
