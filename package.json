@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "translates:generate": "node src/shared/lib/scripts/generate-translates.js"
   },
   "dependencies": {
     "clsx": "^2.0.0",
@@ -29,6 +30,7 @@
     "eslint-config-next": "14.0.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "postcss": "^8",
+    "reverso-api": "^2.22.6",
     "sass": "^1.69.5",
     "stylelint": "^15.11.0",
     "stylelint-config-standard-scss": "^11.1.0",

@@ -1,3 +1,5 @@
 {
-  "test": "Hello"
+  "landing": {
+    "slogan": "Projects are easy. Management is easier."
+  }
 }

@@ -22,7 +22,7 @@ export const LocaleSwitcherSelect = ({ children, defaultValue }: LocaleSwitcherS
 
   return (
     <select
-      className="inline-flex text-black"
+      className="inline-flex text-primary p-1 cursor-pointer bg-secondary-accent rounded-md shadow"
       defaultValue={defaultValue}
       disabled={isPending}
       onChange={onSelectChange}
