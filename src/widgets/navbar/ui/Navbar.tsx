@@ -5,9 +5,7 @@ import ThemeSwitch from "@/app/config/providers/ui/ThemeSwitch";
 
 import { UserAvatarMenu } from "@/widgets/user-avatar-menu";
 
-import { SignInButton } from "@/features/auth/sign-in";
 import { SignedIn } from "@/features/auth/SignedIn";
-import { SignedOut } from "@/features/auth/SignedOut";
 
 import { LocaleSwitcher } from "@/shared/components/language-switch";
 import { Text } from "@/shared/ui/typography";
@@ -25,9 +23,6 @@ export const Navbar = () => {
           <SignedIn>
             <UserAvatarMenu />
           </SignedIn>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
         </div>
       </div>
     </nav>
