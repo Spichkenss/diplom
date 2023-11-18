@@ -7,8 +7,8 @@ const Reverso = require("reverso-api");
 const reverso = new Reverso();
 
 // Конфиг
-const sourceFilePath = path.join(__dirname, "../../../../", "translations", "ru.json"); // Путь до файла-источника
-const outputFolderPath = path.join(__dirname, "../../../../", "translations"); // Путь до папки для сохранения переводов
+const sourceFilePath = path.join(__dirname, "../../../../public/translations", "ru.json"); // Путь до файла-источника
+const outputFolderPath = path.join(__dirname, "../../../../public/translations"); // Путь до папки для сохранения переводов
 
 const getSourceObject = () => {
   const file = fs.readFileSync(sourceFilePath);

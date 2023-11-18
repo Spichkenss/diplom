@@ -9,6 +9,10 @@
 
 
 .page-wrapper {
-    @apply flex min-h-screen flex-col items-center mt-12 pt-2;
+    @apply flex min-h-screen flex-col items-center justify-center;
+}
+
+.center {
+    @apply flex items-center justify-center
 }
 

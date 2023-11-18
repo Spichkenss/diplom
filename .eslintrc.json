@@ -16,6 +16,7 @@
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": "off",
     "react/jsx-no-useless-fragment": "off",
+    "react/button-has-type": "off",
     "react/jsx-fragments": "off",
     "arrow-body-style": "off",
     "quotes": ["error", "double"],

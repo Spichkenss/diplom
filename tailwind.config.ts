@@ -19,11 +19,13 @@ const config: Config = {
       },
       textColor: {
         primary: "var(--text-color)",
+        controls: "var(--controls-text-color)",
       },
       backgroundColor: {
         primary: "var(--bg-color-primary)",
         secondary: "var(--bg-color-secondary)",
         "secondary-accent": "var(--bg-color-secondary-accent)",
+        controls: "var(--controls-color)",
       },
     },
   },

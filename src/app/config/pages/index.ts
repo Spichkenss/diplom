@@ -1,1 +1,5 @@
-export const HOME_PAGE_URL = "/";
+export const Pages = {
+  HOME: "/",
+  SIGNIN: "/sign-in",
+  SIGNUP: "/sign-up",
+};

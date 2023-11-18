@@ -1,0 +1,11 @@
+{
+  "landing": {
+    "slogan": "Projects are easy. Management is easier.",
+    "description": "Effective project management: simple, flexible, collaborative.",
+    "get-started-btn": "Get started"
+  },
+  "auth": {
+    "sign-in": "Sign in",
+    "via-social": "Continue with"
+  }
+}
