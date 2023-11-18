@@ -9,6 +9,8 @@ import { SignInButton } from "@/features/auth/sign-in";
 import { SignedIn } from "@/features/auth/SignedIn";
 import { SignedOut } from "@/features/auth/SignedOut";
 
+import { LocaleSwitcher } from "@/shared/components/language-switch";
+
 export const Navbar = () => {
   return (
     <nav className="bg-secondary text-primary py-1 fixed left-0 top-0 right-0 border-b-[1px] border-b-neutral">
@@ -18,6 +20,7 @@ export const Navbar = () => {
         </Link>
         <div className="flex flex-row gap-4">
           <ThemeSwitch />
+          <LocaleSwitcher />
           <SignedIn>
             <UserAvatarMenu />
           </SignedIn>
