@@ -1,7 +1,7 @@
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 
 export const localesMap: Readonly<Record<string, string>> = {
-  ru: "Russian",
+  ru: "Русский",
   en: "English",
 } as const;
 
