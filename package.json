@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "translates:generate": "node src/shared/lib/scripts/generate-translates.js"
+    "translates:generate": "tsc src/shared/lib/scripts/generate-translates/generate-translates.ts && node src/shared/lib/scripts/generate-translates/generate-translates.js"
   },
   "dependencies": {
     "clsx": "^2.0.0",
@@ -21,6 +21,7 @@
     "tailwind-merge": "^2.0.0"
   },
   "devDependencies": {
+    "@types/inquirer": "^9.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
