@@ -10,7 +10,7 @@ export default function SignInPage() {
     <main className="page-wrapper gap-4">
       <Text className="text-4xl font-semibold">{t("sign-in")}</Text>
       <AuthSocialButton provider="github" />
-      {/* <AuthSocialButton provider="google" /> */}
+      <AuthSocialButton provider="google" />
     </main>
   );
 }
