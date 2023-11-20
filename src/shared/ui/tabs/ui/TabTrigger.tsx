@@ -28,7 +28,7 @@ export const TabTrigger = forwardRef<HTMLButtonElement, TabTriggerProps>(
         className={cn(
           "bg-primary flex items-center justify-center rounded-md p-1 outline-none border-none",
           { "bg-secondary-accent": index === currentIndex },
-          className,
+          className
         )}
         onClick={handleClick}
         {...rest}
@@ -36,7 +36,7 @@ export const TabTrigger = forwardRef<HTMLButtonElement, TabTriggerProps>(
         {children}
       </button>
     );
-  },
+  }
 );
 
 TabTrigger.displayName = "TabTrigger";

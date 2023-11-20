@@ -19,7 +19,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
         </div>
       </TabsContextProvider>
     );
-  },
+  }
 );
 
 Tabs.displayName = "Tabs";

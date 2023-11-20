@@ -3,7 +3,7 @@ const path = require("path");
 const readline = require("readline");
 const Reverso = require("reverso-api");
 const {
-  colors, localesMap, LogType, sourceLanguage, translationsDirPath,
+  colors, localesMap, LogType, sourceLanguage, translationsDirPath
 } = require("./config");
 
 const reverso = new Reverso({ attempts: 1 });
@@ -11,7 +11,7 @@ const reverso = new Reverso({ attempts: 1 });
 const log = (message, type) => {
   const bgColor = {
     [LogType.error]: colors.bgRed,
-    [LogType.success]: colors.bgGreen,
+    [LogType.success]: colors.bgGreen
   };
   // eslint-disable-next-line no-console
   console.log(bgColor[type], colors.fgBlack, message, colors.reset);
@@ -20,7 +20,7 @@ const log = (message, type) => {
 const prompt = (welcomeText) => {
   const rl = readline.createInterface({
     input: process.stdin,
-    output: process.stdout,
+    output: process.stdout
   });
 
   return new Promise((resolve) => {
@@ -87,7 +87,7 @@ const translateFromSourceLanguage = async (text, targetLanguage) => {
       (error, response) => {
         if (error) reject(error);
         else resolve(response.translations[0]);
-      },
+      }
     );
   });
 };

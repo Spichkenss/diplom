@@ -13,7 +13,7 @@ import Providers from "../../config/providers";
 import "../../config/styles/globals.scss";
 
 export const metadata: Metadata = {
-  title: "Planner.io",
+  title: "Planner.io"
 };
 
 interface LocaleLayoutProps extends PropsWithChildren {

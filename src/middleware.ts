@@ -6,10 +6,10 @@ export default createMiddleware({
   // A list of all locales that are supported
   locales,
   // Used when no locale matches
-  defaultLocale: "ru",
+  defaultLocale: "ru"
 });
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ["/", "/(ru|en)/:path*"],
+  matcher: ["/", "/(ru|en)/:path*"]
 };

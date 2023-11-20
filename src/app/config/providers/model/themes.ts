@@ -10,5 +10,5 @@ interface ITheme {
 export const themes: ITheme[] = [
   { value: "light", icon: IoSunnyOutline },
   { value: "dark", icon: IoMoonOutline },
-  { value: "system", icon: IoIosDesktop },
+  { value: "system", icon: IoIosDesktop }
 ];

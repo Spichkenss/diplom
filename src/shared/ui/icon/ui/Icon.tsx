@@ -11,7 +11,7 @@ interface IconProps {
 }
 
 export const Icon = ({
-  icon, size, color, className,
+  icon, size, color, className
 }: IconProps) => {
   return (
     <IconContextProvider value={{ size, color, className }}>

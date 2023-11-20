@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  createContext, PropsWithChildren, useContext, useMemo, useState,
+  createContext, PropsWithChildren, useContext, useMemo, useState
 } from "react";
 
 import { TabsContextProps } from "./Tabs.types";

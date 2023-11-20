@@ -7,12 +7,12 @@ import { cn } from "@/shared/lib/cn";
 
 const brandName = {
   github: "Github",
-  google: "Google",
+  google: "Google"
 };
 
 const brandColor = {
   github: "bg-[#333333]",
-  google: "bg-[#EA4335]",
+  google: "bg-[#EA4335]"
 };
 
 type Provider = "github" | "google"

@@ -19,6 +19,13 @@
     "react/button-has-type": "off",
     "react/jsx-fragments": "off",
     "arrow-body-style": "off",
+    "comma-dangle": ["warn", {
+      "arrays": "never",
+      "objects": "never",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+    }],
     "quotes": ["error", "double"],
     "no-unused-vars": ["warn", {"args":  "none"}],
     // import settings
