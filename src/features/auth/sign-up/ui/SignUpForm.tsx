@@ -26,7 +26,7 @@ export const SignUpForm = () => {
     }
   });
 
-  const onSubmit = (data: SignUpSchemaType) => {
+  const onSubmit = (/* data: SignUpSchemaType */) => {
     form.reset();
   };
 
