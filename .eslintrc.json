@@ -3,11 +3,16 @@
     "next/core-web-vitals",
     "airbnb",
     "airbnb/hooks",
-    "plugin:tailwindcss/recommended"
+    "plugin:tailwindcss/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "plugins": [
     "simple-import-sort",
-    "import"
+    "import",
+    "@typescript-eslint"
   ],
   "overrides": [
     {
@@ -15,9 +20,23 @@
         "*.ts", "*.tsx", "*.js"
       ],
       "parser": "@typescript-eslint/parser"
+    },
+    {
+      "files": [
+        "*.js"
+      ],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
     }
   ],
   "rules": {
+    "@typescript-eslint/consistent-type-exports": ["error", {
+      "fixMixedExportsWithInlineTypeSpecifier": true
+    }],
+    "@typescript-eslint/consistent-type-imports": ["error", {
+      "fixStyle": "inline-type-imports"
+    }],
     "tailwindcss/no-custom-classname": "off",
     "import/prefer-default-export": "off",
     "react/require-default-props": "off",
@@ -36,6 +55,14 @@
       "exports": "never",
       "functions": "never"
     }],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
     "quotes": ["error", "double"],
     "no-unused-vars": ["warn", {"args":  "none"}],
     // import settings

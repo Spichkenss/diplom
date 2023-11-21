@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEventHandler, PropsWithChildren, useTransition } from "react";
+import { type ChangeEventHandler, type PropsWithChildren, useTransition } from "react";
 
 import { usePathname, useRouter } from "@/app/config/localization/localization-config";
 

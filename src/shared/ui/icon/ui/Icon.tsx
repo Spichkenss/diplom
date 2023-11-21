@@ -1,5 +1,5 @@
 import { createElement } from "react";
-import { IconType } from "react-icons";
+import { type IconType } from "react-icons";
 
 import { IconContextProvider } from "@/shared/ui/icon/model/Icon.context";
 

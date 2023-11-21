@@ -1,6 +1,6 @@
 "use client";
 
-import { ComponentProps, forwardRef } from "react";
+import { type ComponentProps, forwardRef } from "react";
 
 import { cn } from "@/shared/lib/cn";
 import { useTabsContext } from "@/shared/ui/tabs/model/Tabs.context";

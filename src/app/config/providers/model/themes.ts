@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import { type IconType } from "react-icons";
 import { IoIosDesktop } from "react-icons/io";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 

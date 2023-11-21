@@ -1,43 +1,75 @@
 "use client";
 
-import { FormEventHandler, useState } from "react";
+import { FormProvider, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
+import { useTranslations } from "next-intl";
 
 import { useRouter } from "@/app/config/localization/localization-config";
 import { Pages } from "@/app/config/pages";
 
-import { SignInDto } from "@/features/auth/sign-in/model/types";
+import { Button } from "@/shared/ui/button";
+import {
+  FieldError, FormControl, FormField, FormItem, FormLabel
+} from "@/shared/ui/form";
+import { Input } from "@/shared/ui/input";
+
+import { signInFormFields } from "../model/fields";
+import { signInSchema, type SignInSchemaType } from "../model/types";
 
 export const SignInForm = () => {
   const router = useRouter();
+  const t = useTranslations("auth");
 
-  const [credentials, setCredentials] = useState<SignInDto>({ email: "", password: "" });
+  const form = useForm<SignInSchemaType>({
+    resolver: zodResolver(signInSchema),
+    defaultValues: {
+      email: "",
+      password: ""
+    }
+  });
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data: SignInSchemaType) => {
+    const { email, password } = data;
     await signIn("credentials", {
-      email: credentials.email,
-      password: credentials.password,
+      email,
+      password,
       redirect: false
     });
     router.replace(Pages.DASHBOARD);
+    form.reset();
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-      <input
-        type="text"
-        name="email"
-        placeholder="email"
-        onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
-      />
-      <input
-        type="password"
-        name="password"
-        placeholder="password"
-        onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
-      />
-      <button type="submit">submit</button>
-    </form>
+    <FormProvider {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-4">
+        {signInFormFields.map(({ type, name }) => (
+          <FormField
+            key={name}
+            control={form.control}
+            name={name}
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>
+                  {t(`${name}.label`)}
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    variant="accent"
+                    type={type}
+                    placeholder={t(`${name}.placeholder`)}
+                    {...field}
+                  />
+                </FormControl>
+                <FieldError />
+              </FormItem>
+            )}
+          />
+        ))}
+        <Button type="submit" className="mt-6">
+          {t("sign-in.button")}
+        </Button>
+      </form>
+    </FormProvider>
   );
 };

@@ -1,14 +1,22 @@
 html[class="dark"] {
-  --text-color: white;
+  // Text
+  --text-color: 255, 255, 255;
+  --text-color-inverted: 0, 0, 0;
+  --text-hyperlink: 255, 255, 255;
+  --text-error: 255, 40, 40;
+  --icon-color: 255, 255, 255;
 
-  --bg-color-primary: theme("colors.neutral.900");
-  --bg-color-secondary: theme("colors.neutral.800");
-  --bg-color-secondary-accent: theme("colors.neutral.700");
+  // Background
+  --bg-color-primary: 23, 23, 23;
+  --bg-color-secondary: 38, 38, 38;
+  --bg-color-secondary-accent: 64, 64, 64;
 
-  --icon-color: theme("colors.white");
+  // Border
+  --border-color: 64, 64, 64;
+  --border-color-accent: 255, 255, 255;
+  --border-error: 255, 40, 40;
 
-  --border-color: theme("colors.neutral.700");
-
-  --controls-color: theme("colors.white");
-  --controls-text-color: theme("colors.black");
+  // Controls
+  --controls-color: 255,255,255;
+  --controls-text-color: 0, 0, 0;
 }

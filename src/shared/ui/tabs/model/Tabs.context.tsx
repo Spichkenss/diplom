@@ -1,10 +1,10 @@
 "use client";
 
 import {
-  createContext, PropsWithChildren, useContext, useMemo, useState
+  createContext, type PropsWithChildren, useContext, useMemo, useState
 } from "react";
 
-import { TabsContextProps } from "./Tabs.types";
+import { type TabsContextProps } from "./Tabs.types";
 
 const TabsContext = createContext<TabsContextProps | null>(null);
 

@@ -17,7 +17,7 @@ export const Navbar = () => {
         <Link href={Pages.HOME} className="p-0 text-xl font-extrabold">
           <Text>Planner.io</Text>
         </Link>
-        <div className="hidden flex-row items-center gap-4 md:flex">
+        <div className="flex flex-row items-center gap-4">
           <ThemeSwitch />
           <LocaleSwitcher />
           <SignedIn>

@@ -1,4 +1,4 @@
-import { Fragment, PropsWithChildren } from "react";
+import { Fragment, type PropsWithChildren } from "react";
 import { getServerSession } from "next-auth";
 
 interface SignedInProps extends PropsWithChildren {}

@@ -1,14 +1,22 @@
 html[class="light"] {
-  --text-color: black;
+  // Text
+  --text-color: 0, 0, 0;
+  --text-color-inverted: 255, 255, 255;
+  --text-hyperlink: 37, 99, 235;
+  --text-error: 255, 0, 0;
+  --icon-color: 37, 99, 235;
 
-  --bg-color-primary: theme("colors.white");
-  --bg-color-secondary: theme("colors.neutral.100");
-  --bg-color-secondary-accent: theme("colors.neutral.200");
+  // Background
+  --bg-color-primary: 255, 255, 255;
+  --bg-color-secondary: 245, 245, 245;
+  --bg-color-secondary-accent: 229, 229, 229;
 
-  --icon-color: theme("colors.blue.600");
+  // Border
+  --border-color: 229, 229, 229;
+  --border-color-accent: 0, 0, 0;
+  --border-error: 255, 0, 0;
 
-  --border-color: theme("colors.neutral.200");
-
-  --controls-color: theme("colors.black");
-  --controls-text-color: theme("colors.white");
+  // Controls
+  --controls-color: 0, 0, 0;
+  --controls-text-color: 255, 255, 255;
 }

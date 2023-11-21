@@ -5,8 +5,28 @@
     "get-started-btn": "Get started"
   },
   "auth": {
-    "sign-in": "Sign in",
-    "sign-up": "Sign up",
+    "username": {
+      "label": "Username",
+      "placeholder": "Enter your username..."
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter your email address..."
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Create a password..."
+    },
+    "sign-in": {
+      "button": "Sign in",
+      "title": "Sign in",
+      "signup-link": "Not signed up yet?"
+    },
+    "sign-up": {
+      "button": "Submit",
+      "title": "Sign up",
+      "signin-link": "Already signed up?"
+    },
     "via-social": "Continue with"
   }
 }

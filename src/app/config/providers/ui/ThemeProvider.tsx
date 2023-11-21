@@ -1,6 +1,6 @@
 "use client";
 
-import { PropsWithChildren, useEffect, useState } from "react";
+import { type PropsWithChildren, useEffect, useState } from "react";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 
 interface ThemeProviderProps extends PropsWithChildren {}

@@ -1,11 +1,10 @@
-import { PropsWithChildren } from "react";
+import { type PropsWithChildren } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 
-import { Navbar } from "@/widgets/navbar";
-
 import { cn } from "@/shared/lib/cn";
+import { Layout } from "@/shared/ui/layout";
 
 import { montserrat } from "../../config/fonts";
 import Providers from "../../config/providers";
@@ -35,8 +34,9 @@ export default async function LocaleLayout({ children, params: { locale } }: Loc
       <body className={cn("bg-secondary", montserrat.className)}>
         <Providers>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <Navbar />
-            {children}
+            <Layout>
+              {children}
+            </Layout>
           </NextIntlClientProvider>
         </Providers>
       </body>
