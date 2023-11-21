@@ -69,6 +69,7 @@ export const SignInForm = () => {
         <Button type="submit" className="mt-6">
           {t("sign-in.button")}
         </Button>
+        <button onClick={() => signIn("github")}>test</button>
       </form>
     </FormProvider>
   );

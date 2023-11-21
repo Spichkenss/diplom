@@ -15,7 +15,7 @@
     },
     "password": {
       "label": "Password",
-      "placeholder": "Create a password..."
+      "placeholder": "Enter a password..."
     },
     "sign-in": {
       "button": "Sign in",

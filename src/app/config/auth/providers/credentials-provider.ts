@@ -4,6 +4,7 @@ import NextAuthCredentialsProvider from "next-auth/providers/credentials";
 import prisma from "@/shared/lib/prisma/client";
 
 export const CredentialsProvider = NextAuthCredentialsProvider({
+  type: "credentials",
   name: "credentials",
   credentials: {
     email: { label: "email", type: "email" },
@@ -18,12 +19,12 @@ export const CredentialsProvider = NextAuthCredentialsProvider({
     });
 
     if (!existingUser) {
-      return null;
+      throw new Error("User not found");
     }
 
     const passwordMatched = await bcrypt.compare(
       credentials.password,
-      existingUser.hashedPassword
+      existingUser.hashedPassword || ""
     );
 
     if (!passwordMatched) {

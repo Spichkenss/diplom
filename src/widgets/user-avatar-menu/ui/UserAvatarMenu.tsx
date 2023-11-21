@@ -1,10 +1,8 @@
-"use client";
-
 import Image from "next/image";
-import { signOut, useSession } from "next-auth/react";
+import { getServerSession } from "next-auth";
 
-export const UserAvatarMenu = () => {
-  const { data: session } = useSession();
+export const UserAvatarMenu = async () => {
+  const session = await getServerSession();
 
   return (
     <Image
@@ -12,8 +10,7 @@ export const UserAvatarMenu = () => {
       alt="user-avatar"
       width={40}
       height={40}
-      className="cursor-pointer rounded-full"
-      onClick={() => signOut()}
+      className="rounded-full"
     />
   );
 };

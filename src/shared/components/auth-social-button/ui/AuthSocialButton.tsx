@@ -28,7 +28,7 @@ export const AuthSocialButton = ({ provider }: AuthSocialButtonProps) => {
   return (
     <Button
       type="button"
-      onClick={() => signIn(provider, { callbackUrl: "http://localhost:3000/ru/dashboard" })}
+      onClick={() => signIn(provider)}
       className={cn("px-2 py-1 rounded-md flex items-center justify-center", brandColor[provider])}
     >
       <span className="text-white">
