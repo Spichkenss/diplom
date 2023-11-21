@@ -10,13 +10,13 @@ export default function HomePage() {
   const t = useTranslations("landing");
 
   return (
-    <main className="page-wrapper center bg-primary text-primary !m-0 !p-0">
+    <main className="page-wrapper center !m-0 bg-primary !p-0 text-primary">
       <div className="container">
         <header className="flex flex-col items-center gap-4">
-          <Text className="max-w-md text-3xl font-bold text-center">{t("slogan")}</Text>
-          <Text className="max-w-xl text-base text-center font-semibold">{t("description")}</Text>
+          <Text className="max-w-md text-center text-3xl font-bold">{t("slogan")}</Text>
+          <Text className="max-w-xl text-center text-base font-semibold">{t("description")}</Text>
           <Button>
-            <Link href={Pages.SIGNIN}>{t("get-started-btn")}</Link>
+            <Link href={Pages.SIGNUP}>{t("get-started-btn")}</Link>
           </Button>
         </header>
       </div>

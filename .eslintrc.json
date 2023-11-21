@@ -2,13 +2,23 @@
   "extends": [
     "next/core-web-vitals",
     "airbnb",
-    "airbnb/hooks"
+    "airbnb/hooks",
+    "plugin:tailwindcss/recommended"
   ],
   "plugins": [
     "simple-import-sort",
     "import"
   ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts", "*.tsx", "*.js"
+      ],
+      "parser": "@typescript-eslint/parser"
+    }
+  ],
   "rules": {
+    "tailwindcss/no-custom-classname": "off",
     "import/prefer-default-export": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",

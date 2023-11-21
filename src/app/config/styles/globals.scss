@@ -7,6 +7,9 @@
     @import "./themes/light-theme";
 }
 
+* {
+    @apply outline-none;
+}
 
 .page-wrapper {
     @apply flex min-h-screen flex-col items-center justify-center;

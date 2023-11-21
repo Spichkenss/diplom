@@ -16,13 +16,13 @@ export const LocaleSwitcherSelect = ({ children, defaultValue }: LocaleSwitcherS
   const onSelectChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
     const nextLocale = event.target.value;
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      router.push(pathname, { locale: nextLocale });
     });
   };
 
   return (
     <select
-      className="inline-flex text-primary p-1 cursor-pointer bg-secondary-accent rounded-md shadow"
+      className="inline-flex cursor-pointer rounded-md bg-secondary-accent p-1 text-primary shadow"
       defaultValue={defaultValue}
       disabled={isPending}
       onChange={onSelectChange}

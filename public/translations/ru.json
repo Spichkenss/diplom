@@ -5,7 +5,8 @@
     "get-started-btn": "Начать"
   },
   "auth": {
-    "sign-in": "Войти",
+    "sign-in": "Вход",
+    "sign-up": "Регистрация",
     "via-social": "Войти с помощью"
   }
 }

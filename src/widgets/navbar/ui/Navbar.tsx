@@ -12,12 +12,12 @@ import { Text } from "@/shared/ui/typography";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-secondary text-primary py-2.5 md:py-1 fixed left-0 top-0 right-0 border-b-[1px] border-b-neutral">
-      <div className="container flex flex-row justify-between items-center">
-        <Link href={Pages.HOME} className="font-extrabold text-xl p-0">
+    <nav className="fixed inset-x-0 top-0 border-b-[1px] border-b-neutral bg-secondary py-2.5 text-primary md:py-1">
+      <div className="container flex flex-row items-center justify-between">
+        <Link href={Pages.HOME} className="p-0 text-xl font-extrabold">
           <Text>Planner.io</Text>
         </Link>
-        <div className="hidden md:flex flex-row items-center gap-4">
+        <div className="hidden flex-row items-center gap-4 md:flex">
           <ThemeSwitch />
           <LocaleSwitcher />
           <SignedIn>
